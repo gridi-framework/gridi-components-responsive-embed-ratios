@@ -1,0 +1,14 @@
+.responsive-embed {
+    &.responsive-embed-adapt-to-container {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    @each $ratio-prefix, $ratio in $gridi-components-responsive-embed-ratios {
+        &.responsive-embed-#{$ratio-prefix} {
+            padding-bottom: $ratio;
+        }
+    }
+}
